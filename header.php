@@ -27,6 +27,13 @@
 <script>
 jQuery('.carousel').carousel();
 </script>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .has-gradient ul {
+       filter: none;
+    }
+  </style>
+<![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
@@ -48,7 +55,7 @@ jQuery('.carousel').carousel();
 		</div>
 
 		<div class="main-navigation-wrapper">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation has-gradient" role="navigation">
 				<h1 class="menu-toggle"><?php _e( 'Menu', 'graphy' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'graphy' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
