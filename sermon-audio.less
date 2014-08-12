@@ -1,0 +1,118 @@
+// 
+// Sermons
+// ------------------------------------------------
+
+.page-id-6,
+.pagename-sermons {
+	#sa_widget_browser, #sa_widget_browser * {
+		font-family: @font-family-base;
+		line-height: 1.7em;
+	}
+
+	#sa_widget_browser {
+		.sa_widget_browser_pages_top,
+		.sa_widget_browser_pages_bottom {
+			background-color: #fff;
+			height: auto;
+			border: none;
+			border-top: 2px solid #111;
+			border-radius: 2px;
+			text-decoration: none;
+			padding: 10px 0;
+		}
+		.sa_widget_browser_pages_bottom {
+			border-top: none;
+			border-bottom: 2px solid #111;
+		}
+		.sa_widget_browser_pages_jump {
+			.current_page {
+				background-color: @link-color;
+			}
+			.jump_page {
+				background-color: #111;
+			}
+		}
+		.sa_widget_browser_sort {
+			a {
+				color: @link-color;
+				text-decoration: none;
+			}
+			.selected_sort {
+				color: @text-color;
+				&:after {
+					.fa();
+					content: "\f078";
+				
+				}
+			}
+		}
+		.sa_widget_browser_previous,
+		.sa_widget_browser_next {
+			
+			color: #fff;
+			padding: 0;
+			padding-top: 2px;
+			> a {
+				background-color: #111;
+				padding: 9px 11px !important;
+				border-radius: 2px;
+			}
+		}
+	}
+
+	#sa_widget_content {
+		
+
+		div.sa_widget_sermons {
+			a {
+				color: @link-color !important;
+				&:hover {
+					color: darken(@link-color, 10%) !important;
+				}
+			}
+			img {
+				margin-top: 0;
+			}
+			.sa_widget_title {
+				font-family: @font-family-secondary;
+				font-size: 1.1em;
+			}
+			div.sa_widget_sermons_row {
+				&:nth-child(odd),
+				&:nth-child(even) {
+					.sa_widget_tools {
+						.play {
+							.icon {
+								background: transparent;
+								&:before {
+									.fa();
+									content: "\f144";
+									font-size: 18px;
+									height: auto;
+									width: auto;
+								}
+							}
+							.text {
+								color: @link-color;
+								&:hover {
+									color: darken(@link-color, 10%);
+									.min {
+										color: darken(@link-color, 10%);
+									}
+								}
+								
+							}
+						}
+					}
+				}
+				
+				&:nth-child(odd) {
+					.img-retina("images/greyzz.png", "images/greyzz_@2X.png", 149px, 139px) !important;
+					background-color: transarent;
+					
+				}
+			}
+		}
+	
+	}
+}
