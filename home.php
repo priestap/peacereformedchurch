@@ -91,7 +91,7 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
-		<div id="secondary" class="widget-area col-md-4" role="complementary">
+		<div id="secondary" class="col-md-4" role="complementary">
 			<aside id="text-3" class="widget widget_text">			
 				<div class="textwidget">
 					<div id="servicetimes">
