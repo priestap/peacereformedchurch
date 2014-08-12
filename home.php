@@ -90,7 +90,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
-		</div><!-- #primary -->
+		</div><!-- #primary --> 
 		<div id="secondary" class="col-md-4" role="complementary">
 			<aside id="text-3" class="widget widget_text">			
 				<div class="textwidget">
