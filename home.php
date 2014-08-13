@@ -73,7 +73,7 @@ get_header(); ?>
 
 	</section>
 	<div class="row">
-		<div id="primary" class="col-sm-8">
+		<div id="primary" class="col-md-8">
 			<main id="main" class="site-main" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -90,8 +90,8 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
-		</div><!-- #primary --> 
-		<div id="secondary" class="col-md-4" role="complementary">
+		</div><!-- #primary -->
+		<div id="secondary" class="widget-area col-md-4" role="complementary">
 			<aside id="text-3" class="widget widget_text">			
 				<div class="textwidget">
 					<div id="servicetimes">
@@ -116,10 +116,10 @@ get_header(); ?>
 					</div>
 			
 					<div class="directions-listen row">
-						<div class="directions col-md-6">
+						<div class="directions col-xs-6">
 							<a href="https://goo.gl/maps/e77aB"><i class="fa fa-map-marker"></i> <em>Get Directions</em></a>
 						</div>
-						<div class="listen col-sm-6">
+						<div class="listen col-xs-6">
 							<a href="/audio/sermons/"><i class="fa fa-microphone"></i> <em>Listen to Sermons</em></a>
 						</div>
 					</div>
