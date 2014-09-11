@@ -43,6 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 // -----------------------------------------------------------
 
 @import "variables.less";
+@import "fonts.less";
 
 // Mixins
 // -----------------------------------------------------------
@@ -198,6 +199,7 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+	text-decoration: none;
 }
 a img {
 	border: 0;
@@ -547,12 +549,17 @@ object {
 		line-height: 28px;
 		margin-bottom: 24px;
 		margin-top: 48px;
+		> .fa {
+			color: lighten(@gray, 20%);
+			margin-right: 5px;
+		}
 	}
 	h3 {
 		font-size: 18px;
-		line-height: 24px;
-		margin-bottom: 24px;
-		margin-top: 24px;
+		line-height: 30px;
+		margin-bottom: 28px;
+		margin-top: 42px;
+		color: #777;
 	}
 	h4 {
 		font-size: 16px;
@@ -571,6 +578,27 @@ object {
 		line-height: 16px;
 		margin-bottom: 0;
 		margin-top: 24px;
+	}
+	a {
+		text-decoration: none;
+		border-bottom: 1px dotted #999;
+		.transition(color .5s);
+		&:hover {
+			text-decoration: none;
+			color: darken(@link-color, 10%);
+			border-bottom: 1px solid @brand-primary;
+		}
+	}
+}
+
+.pagename-ministries,
+.page-id-8 {
+	// Ministries
+	.entry-content {
+		h3 {
+			font-family: @font-family-script;
+			font-size: 24px;
+		}
 	}
 }
 
@@ -622,6 +650,7 @@ object {
 		font-size: 16px;
 		/* Headings */
 		h1 {
+			font-family: @font-family-script;
 			font-size: 34px;
 			line-height: 44px;
 			margin-bottom: 28px;
@@ -634,13 +663,13 @@ object {
 			margin-top: 56px;
 		}
 		h3 {
-			font-size: 24px;
+			font-size: 22px;
 			line-height: 30px;
 			margin-bottom: 28px;
 			margin-top: 42px;
 		}
 		h4 {
-			font-size: 22px;
+			font-size: 18px;
 			line-height: 28px;
 			margin-bottom: 28px;
 			margin-top: 28px;
@@ -764,6 +793,8 @@ object {
 ----------------------------------------------- */
 body {
 	background: #f9f9f9 url("images/greyzz.png");
+	// background: url("images/tulip.jpg") no-repeat;
+// 	background-size: 100% 100%;
 }
 .site {
 	margin: 0 auto;
@@ -955,7 +986,7 @@ body {
 ----------------------------------------------- */
 
 .main-navigation-wrapper {
-	border-bottom: solid 1px #eee;
+	border-bottom: dashed 1px #ddd;
 }
 .main-navigation {
 	font-family: Bitter, Georgia, serif;
@@ -1075,7 +1106,7 @@ body {
 	}
 	.main-navigation div.menu > ul,
 	.main-navigation ul.menu {
-		border-top: solid 1px #eee;
+		border-top: dashed 1px #ddd;
 		padding: 10px 30px;
 	}
 	.main-navigation li {
@@ -1186,7 +1217,8 @@ body {
 	margin-bottom: 24px;
 }
 .entry-title {
-	font-size: 26px;
+	font-family: @font-family-script;
+	font-size: 38px;
 	line-height: 34px;
 	margin-bottom: 8px;
 	text-align: center;
@@ -1230,7 +1262,7 @@ body {
 }
 @media screen and (min-width: 780px) {
 	.entry-title {
-		font-size: 34px;
+		font-size: 38px;
 		line-height: 42px;
 		margin-bottom: 12px;
 	}
@@ -1620,7 +1652,7 @@ a.comment-edit-link:hover {
 	height: 0;
 	left: -1.2em;
 	position: relative;
-	top: 0.21em;
+	top: -.8em;
 	width: 0;
 	color: #ccc;
 }
@@ -1734,23 +1766,29 @@ a.comment-edit-link:hover {
 .site-copyright {
 	font-size: 14px;
 	margin-bottom: 12px;
+	a {
+		&:hover {
+			color: #111;
+		}
+		&.facebook-link,
+		&.church-directory {
+			margin: 0 0 0 14px;
+		}
+	}
 }
-.site-copyright a.church-directory {
-	margin-left: 8px;
-}
-.site-copyright a:hover {
-	color: #111;
-}
+
 .site-credit {
 	color: #777;
 	font-size: 13px;
+	a {
+		border-bottom: solid 1px #ccc;
+		&:hover {
+			color: #333;
+		}
+	}
 }
-.site-credit a {
-	border-bottom: solid 1px #ccc;
-}
-.site-credit a:hover {
-	color: #333;
-}
+
+
 @media screen and (min-width: 780px) {
 	.site-copyright {
 		font-size: 15px;
@@ -1899,6 +1937,13 @@ a.comment-edit-link:hover {
   .opacity(.5);
 }
 
+.carousel-control.left {
+	margin-left: -10%;
+}
+.carousel-control.right {
+	margin-right: -10%;
+}
+
 .carousel-control.left,
 .carousel-control.right {
   background-image: none;
@@ -1959,11 +2004,25 @@ a.comment-edit-link:hover {
 // -------------------------------------------------------------
 
 .home {
+	
+	#primary {
+		h1.entry-title {
+			font-family: @font-family-script;			
+			font-size: 40px;
+		}
+		.entry-content {
+			p {
+				font-size: 1.2em;
+				line-height: 1.7;
+			}
+		}
+	}
 	#secondary {
 		padding-top: 12px;
 		.widget {
 			h1 {
-				font-size: 1.6em;
+				font-family: @font-family-script;			
+				font-size: 2em;
 				padding-bottom: 1em;
 				margin-bottom: 1em;
 				border-bottom: 2px solid #eee;
@@ -1998,13 +2057,23 @@ a.comment-edit-link:hover {
 
 @media (min-width: 960px) {
 	.home {
+		#primary {
+			border-right: 1px dashed #ddd;
+		
+		}
+		.entry-content {
+			padding-right: 30px;
+		}
 		.carousel-inner {
-				margin-left: -80px;
-				margin-right: -80px;
-				margin-top: -80px;
-				width: auto;
-				margin-bottom: 70px;
-			}
+			margin-left: -80px;
+			margin-right: -80px;
+			margin-top: -80px;
+			width: auto;
+			margin-bottom: 70px;
+		}
+		.widget {
+			padding-left: 30px;
+		}
 	}
 }
 
@@ -2022,7 +2091,6 @@ a.comment-edit-link:hover {
 .widget {
 	ul {
 		li {
-
 			> a {
 				padding: 5px 0;
 				&:hover {
@@ -2043,6 +2111,7 @@ a.comment-edit-link:hover {
 	}
 }
 
+
 @radius: 100px;
 
 .directions-listen {
@@ -2054,7 +2123,6 @@ a.comment-edit-link:hover {
 			.transition(all .5s);
 			i  {
 				display: block;
-				font-size: 30px;
 				.img-retina("images/greyzz.png", "images/greyzz_@2X.png", 149px, 139px) !important;
 				height: @radius;
 				width: @radius;
@@ -2103,3 +2171,27 @@ a.comment-edit-link:hover {
 .cn-return-to-top {
   display: none;
 }
+
+.add_posts {
+	ul {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 540px) {
+	.entry-content {
+		img.alignright {
+			float: none;
+			margin: 0 auto 1em;
+			.img-responsive();
+		}
+	}
+}
+
+//
+// Contact 
+// -----------------------------------------------
+
+.photo-address {
+	.make-row();
+} 

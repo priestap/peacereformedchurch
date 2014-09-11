@@ -76,18 +76,33 @@
 			.sa_widget_title {
 				font-family: @font-family-secondary;
 				font-size: 1.1em;
+				margin-bottom: 0;
+				line-height: 1.2em;
 			}
 			div.sa_widget_sermons_row {
 				&:nth-child(odd),
 				&:nth-child(even) {
 					.sa_widget_tools {
+						
+						.sa_widget_download {
+
+							background: transparent;
+							&:before {
+								.licon();
+								content: "\e72e";
+								font-size: 20px;
+								height: auto;
+								width: auto;
+							}
+
+						}
 						.play {
 							.icon {
 								background: transparent;
 								&:before {
-									.fa();
-									content: "\f144";
-									font-size: 18px;
+									.licon();
+									content: "\e780";
+									font-size: 20px;
 									height: auto;
 									width: auto;
 								}

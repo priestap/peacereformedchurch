@@ -24,6 +24,7 @@
 
 <?php wp_head(); ?>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
 <script>
 jQuery('.carousel').carousel();
 </script>

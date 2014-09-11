@@ -22,13 +22,11 @@ get_header(); ?>
 
 	      <!-- Wrapper for slides -->
 	      <div class="carousel-inner">
-	        
 	        <div class="item active">
-	          <img src="<?php echo get_template_directory_uri(); ?>/images/bible.jpg" alt="...">
-	        </div>
-					
-	        <div class="item ">
 	          <img src="<?php echo get_template_directory_uri(); ?>/images/baby.jpg" alt="...">
+	        </div>
+	        <div class="item ">
+	          <img src="<?php echo get_template_directory_uri(); ?>/images/bible.jpg" alt="...">
 	        </div>
 	        
 	        <div class="item">
@@ -112,10 +110,10 @@ get_header(); ?>
 			
 					<div class="directions-listen row">
 						<div class="directions col-xs-6">
-							<a href="https://goo.gl/maps/e77aB"><i class="licon-map x2"></i> <em>Map</em></a>
+							<a href="https://goo.gl/maps/e77aB"><i class="fa fa-map-marker"></i> <em>Get Directions</em></a>
 						</div>
 						<div class="listen col-xs-6">
-							<a href="/audio/sermons/"><i class="licon-mic2 x2"></i> <em>Sermons</em></a>
+							<a href="/audio/sermons/"><i class="fa fa-microphone"></i> <em>Listen to Sermons</em></a>
 						</div>
 					</div>
 
@@ -125,3 +123,4 @@ get_header(); ?>
 		</div>
 	</div>
 <?php get_footer(); ?>
+
